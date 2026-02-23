@@ -1,0 +1,15 @@
+temps = [35, 42, 46, 39, 44, 30, 47]
+
+hottest = max(temps)
+coldest = min(temps)
+
+extreme_days = len([t for t in temps if t > 40])
+
+for i in range(len(temps)):
+    if temps[i] > 45:
+        temps[i] = "Heat Alert"
+
+print("Hottest:", hottest)
+print("Coldest:", coldest)
+print("Extreme Days:", extreme_days)
+print("Updated Temps:", temps)

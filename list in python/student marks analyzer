@@ -1,0 +1,41 @@
+# Student Marks Analyzer
+
+# Sample list of marks
+marks = [95, 67, 120, 45, -5, 88, 76, 95]
+
+# 1️⃣ Remove invalid marks
+valid_marks = [m for m in marks if 0 <= m <= 100]
+
+print("Valid Marks:", valid_marks)
+
+# 2️⃣ Calculate average
+if len(valid_marks) > 0:
+    average = sum(valid_marks) / len(valid_marks)
+else:
+    average = 0
+
+print("Average Marks:", round(average, 2))
+
+# 3️⃣ Find topper(s)
+if valid_marks:
+    highest = max(valid_marks)
+    toppers = [m for m in valid_marks if m == highest]
+    print("Topper Marks:", highest)
+else:
+    print("No valid marks available.")
+
+# 4️⃣ Display grade based on average
+if average >= 90:
+    grade = "A+"
+elif average >= 80:
+    grade = "A"
+elif average >= 70:
+    grade = "B"
+elif average >= 60:
+    grade = "C"
+elif average >= 50:
+    grade = "D"
+else:
+    grade = "F"
+
+print("Grade:", grade)
