@@ -1,0 +1,12 @@
+transactions = [10000, -5000, 20000, -15000, 8000]
+
+balance = sum(transactions)
+
+withdrawals = [t for t in transactions if t < 0]
+largest_withdrawal = min(withdrawals)
+
+large_deposits = len([t for t in transactions if t > 10000])
+
+print("Total Balance:", balance)
+print("Largest Withdrawal:", largest_withdrawal)
+print("Deposits > 10000:", large_deposits)

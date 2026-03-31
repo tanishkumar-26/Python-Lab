@@ -1,0 +1,15 @@
+prices = [1200, 2500, 1200, 800, 3000]
+
+# Remove duplicates
+unique_prices = list(set(prices))
+
+total = sum(unique_prices)
+
+# Apply 10% discount if total > 5000
+if total > 5000:
+    total *= 0.9
+
+# Add 18% GST
+total *= 1.18
+
+print("Final Payable Amount: ₹", round(total, 2))
